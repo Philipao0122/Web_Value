@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <title>Fondo Animado</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        #polygon-container {
+            width: 100vw;
+            height: 20vh;
+        }
+
+        .particle {
+            position: absolute;
+            width: 200px; /* Ancho muy pequeño para simular líneas */
+            height: 10px; /* Altura para simular líneas verticales */
+            background-color: #ffcc00; /* Color amarillo */
+        }
+    </style>
+</head>
+<body>
+    <div id="polygon-container"></div>
+
+    <script>
+        function createParticle() {
+            const particle = document.createElement("div");
+            particle.classList.add("particle");
+            document.getElementById("polygon-container").appendChild(particle);
+            return particle;
+        }
+
+        function animateParticle(particle) {
+            const tl = gsap.timeline({ repeat: -1 });
+
+            tl.fromTo(
+                particle,
+                { opacity: 0, x: -10, y: () => Math.random() * window.innerHeight },
+                {
+                    opacity: 1,
+                    x: window.innerWidth + 10,
+                    y: () => Math.random() * window.innerHeight,
+                    duration: 0.6, // Duración más corta para una sensación más rápida
+                    ease: "power1.inOut", // Easing personalizado
+                    onComplete: () => {
+                        gsap.set(particle, { x: -10, y: Math.random() * window.innerHeight });
+                    }
+                }
+            );
+        }
+
+        for (let i = 0; i < 50; i++) {
+            const particle = createParticle();
+            animateParticle(particle);
+        }
+    </script>
+</body>
+</html>

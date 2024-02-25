@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root {
+    --color-primary: #0C0D7A;
+    --color-title: #000;
+    --align-title: left;
+    --padding-container: 50px 10px;
+    --width-container: 90%;
+    --max-width-container: 1200px;
+    --color-btn: #0506FF;
+    --text-btn: #fff;
+    --padding-btn: 20px 35px;
+    --height-shape: 18em;
+
+
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Staatliches', cursive;
+    background: linear-gradient(to bottom, #11998e, #38ef7d);
+   
+
+
+}
+
+
+
+#polygon-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 50%;
+    margin:-20px 150px;
+    transform: translate(0, -50%);
+}
+
+.text h1 {
+    margin: 0;
+    font-size: 4em;
+    position: relative;
+    z-index: 1;
+}
+
+.text h1::before,
+.text h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #ffcc00;
+    height: 30%;
+    width: 160px; /* Ajusta el ancho del fondo amarillo */
+}
+
+.text h1::before {
+    left: -10px; /* Ajusta la posición del fondo amarillo para "Value" */
+}
+
+.text h1::after {
+    right: 778px;
+    top: 170px /* Ajusta la posición del fondo amarillo para "valor" */
+}
+
+
+.text {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: -440px;
+    padding: 15px;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.particles-container {
+    grid-column: 2 / -1; /* Ocupa todo el lado derecho */
+    grid-row: 1 / span 2; /* Ocupa todo el alto */
+    width: 100%; /* 100% del tamaño del header */
+    height: 100%; /* 100% del tamaño del header */
+    position: relative;
+    z-index: 1;
+}
+.highlight {
+    background-color: #ffcc00; /* Fondo amarillo */
+    padding: 0 1px; /* Agregado para espacio alrededor del texto resaltado */
+}
+.particle {
+    
+    
+    position: absolute;
+    width: 250px;
+    height: 2px;
+   
+    
+    background-color: #ffcc00;
+   
+}
+
+
+
+
+
+
+
+
+.tech_title {
+    font-size: 4rem;
+  
+   
+}
+
+.tech_text{
+            width: 100%; /* Ajusta el tamaño del contenedor de texto según sea necesario */
+            height: 30%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+}
+
+
+.tech_cta {
+    display: inline-block;
+   
+    color: #fff;
+    font-size: 30px;
+    padding: var(--padding-btn);
+    margin: 10px 0px;
+    text-decoration: none;
+}
+
+.illustration {
+    display:block ;
+    width: 95%;
+    margin: -250px auto;
+}
+
+.main{
+    background: red;
+}
+
+.title{
+    font-size: 2.5rem;
+    text-align: var(--align-title);
+    color: var(--color-title)
+}
+.title--border::after{
+    content:"";
+  
+    display: block;
+    width: 100px;
+    margin-top: 20px;
+    height: 4px;
+    background-color: var(--color-primary);
+}
+
+
+.developer{
+    text-align: center;
+   
+    --padding-container: 20px 0px 60px;
+  
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 20px; 
+    padding:20px;
+    box-sizing:border-box;
+  }
+  
+  .grid-item {
+
+   
+    padding: 20px; 
+  
+  }
+    
+
+
+.instructor_name{
+    margin: 20px 0px;
+}
+.ceo_tag{
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+.developer_img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-fit: top;
+}
+.about{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    place-items: center;
+    
+}
+.about_course{
+    width:90%;
+    
+}
+.about_paragraph{
+    margin: 20px 0px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.pic{
+    text-align: center;
+}
+
+.about_pic{
+    width:600px;
+ 
+  
+
+}
+.card{
+    
+    background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 20px;
+    text-align: left;
+}
+.card_pic{
+    width: 50%;
+}
+.card_img{
+    text-align: center;
+    padding:20px;
+}
+.card_copy{
+    margin-top: 20px;
+}
+.card_container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;
+    
+}
+.card_item{
+    padding: 20px;
+}
+
+#mujer1 {
+    transform: translate(-5%, -10%);
+    animation-timing-function: ease-in-out;
+    animation: moveMujer1 2s .1s both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+#mujer2 {
+   
+    transform: translate(-5%, -10%);
+    animation-timing-function: ease-in-out;
+    animation: moveMujer1 2s .1s both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+#Hombre {
+    transform: translate(-4%, -2%);
+    animation-timing-function: ease-in-out;
+    animation: moveMujer1 2s .1s both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+}
+
+@keyframes moveMujer1 {
+    100% {
+        transform: unset;
+       
+    }
+}
+.ventanasv2{
+  
+}
+
+
+#ventana_UL {
+   
+    animation-name: moveUL ;
+    animation-duration: 6s ;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   
+
+}
+
+
+#ventana_UR {
+ 
+    animation-name: moveUR ;
+    animation-duration: 6s ;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+#ventana_DL {
+    
+    animation-name: moveDL ;
+    animation-duration: 6s ;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    
+    
+
+}
+
+#ventana_DR {
+   
+    animation-name: moveDR ;
+    animation-duration: 6s ;
+    animation-delay: 1s;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+    
+
+}
+
+@keyframes moveUL {
+    0%{
+        transform: translate()
+      
+    }
+    25%{
+      
+        transform: translate(0px,110px)
+        
+    }
+   
+    
+    50%{
+        transform:translate(110px, 100px)
+    }
+        
+    75%{
+        transform:translate(100px, 10px)
+    }
+    100%{
+        transform: translate(0px, 0px)
+      
+    }
+    
+  
+}
+  
+
+@keyframes moveUR {
+    0%{
+        transform: translate()
+      
+    }
+    25%{
+       
+        transform: translate(-120px,0px)
+        
+    }
+    50%{
+        transform:translate(-120px, 85px)
+    }
+        
+    75%{
+        transform:translate(10px, 90px)
+    }
+    100%{
+        transform: translate(0px, -20px)
+      
+    }
+      
+   
+
+}
+  
+@keyframes moveDL {
+    0%{
+        transform: translate()
+      
+    }
+    25%{
+        transform:translate(120px, 0px)
+        
+    }
+    50%{
+        transform: translate(120px,-100px)
+    }
+        
+    75%{
+        transform:translate(0px, -100px)scale(.9,.9)
+    }
+    100%{
+        transform: translate(0px, -20px)
+      
+    }
+    
+  
+
+}
+@keyframes moveDR {
+    0%{
+        transform: translate()
+      
+    }
+    25%{
+       
+        transform: translate(0px,-100px)
+        
+    }
+    50%{
+        transform:translate(-110px, -90px)scale(.9,.9)
+    }
+    75%{
+        transform:translate(-100px, -00px)
+    }
+    100%{
+        transform:translate(0px, 0px)
+    }
+  
+}
+ 
+
+
+  
+  
+   
