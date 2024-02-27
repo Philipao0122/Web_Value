@@ -39,13 +39,30 @@ body {
     z-index: 1;
 }
 
+
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px); /* Ajusta la altura de levitación según tu preferencia */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    animation: levitate 2s ease-in-out infinite; /* Ajusta la duración según tus preferencias */
+}
+
 .logo {
     grid-column: 2;
     grid-row: 1 / span 2;
     max-width: 100%;
     height: auto;
     position: relative;
-    top: 50%;
+    top: 30%;
     margin:-20px 150px;
     transform: translate(0, -50%);
 }
