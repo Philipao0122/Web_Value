@@ -197,7 +197,11 @@ body {
   
   }
     
-
+.about_paragraph{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+ 
+}
 
 .instructor_name{
     margin: 20px 0px;
@@ -223,6 +227,11 @@ body {
 }
 .about_course{
     width:90%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 15px;
     
 }
 .about_paragraph{
@@ -230,6 +239,7 @@ body {
     line-height: 1.5;
     font-weight: 300;
     font-size: x-large;
+    
 }
 .pic{
     text-align: center;
@@ -249,16 +259,7 @@ body {
   padding: 20px;
     text-align: left;
 }
-.card_pic{
-    width: 50%;
-}
-.card_img{
-    text-align: center;
-    padding:20px;
-}
-.card_copy{
-    margin-top: 20px;
-}
+
 .card_container{
     width: 90%;
     margin: 0 auto;
@@ -269,6 +270,10 @@ body {
     
 }
 .card_item{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-size: x-large;
+ 
     padding: 20px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -301,6 +306,9 @@ body {
   }
   
 .timeline {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+ 
     display: flex;
     flex-direction: column;
     max-width: 600px;
@@ -323,15 +331,31 @@ body {
     padding: 15px;
     margin: 20px 0;
   
-    width: 350px;
-    height: 320px;
+    width: 650px;
+    height: 220px;
     align-self: flex-start;
-    transform: translateX(460px);
+    transform: translateX(160px);
   }
+  .time-title::after{
+
+    position: absolute;
+    right:780px;
+    top: 170px 
+
+
+  }
+  .time-title {
+  
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  
+    align-self: center; /* Centra verticalmente */
+}
 
   .time:nth-child(even) {
     align-self: flex-end;
-    transform: translateX(700px);
+    transform: translateX(1000px);
   }
 
   .time:nth-child(odd)::before {
@@ -345,197 +369,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
   }
-#mujer1 {
-    transform: translate(-5%, -10%);
-    animation-timing-function: ease-in-out;
-    animation: moveMujer1 2s .1s both;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-}
-
-#mujer2 {
-   
-    transform: translate(-5%, -10%);
-    animation-timing-function: ease-in-out;
-    animation: moveMujer1 2s .1s both;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-}
-
-#Hombre {
-    transform: translate(-4%, -2%);
-    animation-timing-function: ease-in-out;
-    animation: moveMujer1 2s .1s both;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-
-}
-
-@keyframes moveMujer1 {
-    100% {
-        transform: unset;
-       
-    }
-}
 
 
 
-#ventana_UL {
-   
-    animation-name: moveUL ;
-    animation-duration: 6s ;
-    animation-delay: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-   
-
-}
 
 
-#ventana_UR {
- 
-    animation-name: moveUR ;
-    animation-duration: 6s ;
-    animation-delay: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-}
-
-#ventana_DL {
-    
-    animation-name: moveDL ;
-    animation-duration: 6s ;
-    animation-delay: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-direction: alternate;
-    
-    
-
-}
-
-#ventana_DR {
-   
-    animation-name: moveDR ;
-    animation-duration: 6s ;
-    animation-delay: 1s;
-    animation-timing-function:ease;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    
-    
-
-}
-
-@keyframes moveUL {
-    0%{
-        transform: translate()
-      
-    }
-    25%{
-      
-        transform: translate(0px,110px)
-        
-    }
-   
-    
-    50%{
-        transform:translate(110px, 100px)
-    }
-        
-    75%{
-        transform:translate(100px, 10px)
-    }
-    100%{
-        transform: translate(0px, 0px)
-      
-    }
-    
-  
-}
-  
-
-@keyframes moveUR {
-    0%{
-        transform: translate()
-      
-    }
-    25%{
-       
-        transform: translate(-120px,0px)
-        
-    }
-    50%{
-        transform:translate(-120px, 85px)
-    }
-        
-    75%{
-        transform:translate(10px, 90px)
-    }
-    100%{
-        transform: translate(0px, -20px)
-      
-    }
-      
-   
-
-}
-  
-@keyframes moveDL {
-    0%{
-        transform: translate()
-      
-    }
-    25%{
-        transform:translate(120px, 0px)
-        
-    }
-    50%{
-        transform: translate(120px,-100px)
-    }
-        
-    75%{
-        transform:translate(0px, -100px)scale(.9,.9)
-    }
-    100%{
-        transform: translate(0px, -20px)
-      
-    }
-    
-  
-
-}
-@keyframes moveDR {
-    0%{
-        transform: translate()
-      
-    }
-    25%{
-       
-        transform: translate(0px,-100px)
-        
-    }
-    50%{
-        transform:translate(-110px, -90px)scale(.9,.9)
-    }
-    75%{
-        transform:translate(-100px, -00px)
-    }
-    100%{
-        transform:translate(0px, 0px)
-    }
-  
-}
- 
-
-
-  
   
    
