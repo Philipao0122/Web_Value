@@ -73,7 +73,7 @@ body {
 }
 
 .text h1::after {
-    right:623px;
+    right:780px;
     top: 170px /* Ajusta la posición del fondo amarillo para "valor" */
 }
 
