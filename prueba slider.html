@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color:red;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      padding: 15px;
+      margin: 10px 0;
+      
+      max-width: 250px;
+      align-self: flex-start;
+      transform: translateX(-150px);
+    }
+
+    .card:nth-child(even) {
+      align-self: flex-end;
+      transform: translateX(150px);
+    }
+
+    .card:nth-child(odd)::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: #ccc;
+      border-radius: 50%;
+      position: absolute;
+      right: -7.5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="timeline">
+    <div class="card">
+      <h3>Evento 1</h3>
+      <p>Descripción del evento 1.</p>
+    </div>
+    <div class="card">
+      <h3>Evento 2</h3>
+      <p>Descripción del evento 2.</p>
+    </div>
+    <div class="card">
+      <h3>Evento 3</h3>
+      <p>Descripción del evento 3.</p>
+    </div>
+    <div class="card">
+      <h3>Evento 4</h3>
+      <p>Descripción del evento 4.</p>
+    </div>
+    <div class="card">
+      <h3>Evento 5</h3>
+      <p>Descripción del evento 5.</p>
+    </div>
+    <div class="card">
+      <h3>Evento 6</h3>
+      <p>Descripción del evento 6.</p>
+    </div>
+  </div>
+
+</body>
+</html>
